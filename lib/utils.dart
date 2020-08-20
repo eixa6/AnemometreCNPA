@@ -303,8 +303,7 @@ double OriantaionVentPointY(double deg){
 double ConvertTemperature(int deg){
   if (deg!= 127){
     return deg - 50.0;
-  }
-  else{
+  } else {
     return 00.00;
   }
 }

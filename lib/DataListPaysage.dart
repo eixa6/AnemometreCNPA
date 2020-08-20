@@ -43,6 +43,13 @@ class DataListPaysage extends StatelessWidget {
     String heure = "${today.hour.toString().padLeft(2,'0')}h${today.minute.toString().padLeft(2,'0')}";
     var da0 = datas[nbDatas - 1 ].dA0;
     var temp = datas[nbDatas - 1].temp;
+    var trueTemp;
+    if(temp == null){
+      trueTemp = "--";
+    }
+    else{
+      trueTemp = ConvertTemperature(temp);
+    }
     double nb = calculDegOr(da0);
     String orientation = OriantaionVentStr(nb);
     String orientationIni = OriantaionVentStrInitial(nb);
@@ -209,7 +216,7 @@ class DataListPaysage extends StatelessWidget {
                                 ),
                                 Text(
                                   //vent.toString(),
-                                  temp.toString()+ " °C",
+                                  trueTemp.toString()+ " °C",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 50,
