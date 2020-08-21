@@ -1,4 +1,4 @@
-package com.example.anemometre_cnpa
+package com.eixa6.anemometre_cnpa
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
