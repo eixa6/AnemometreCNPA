@@ -75,7 +75,7 @@ String LeMoisSuivantLeNumero(int Mois)
   }
   else if (Mois == 2)
   {
-    resMois = "Fevrier";
+    resMois = "Février";
   }
   else if (Mois == 3)
   {
@@ -99,7 +99,7 @@ String LeMoisSuivantLeNumero(int Mois)
   }
   else if (Mois == 8)
   {
-    resMois = "Aout";
+    resMois = "Août";
   }
   else if (Mois == 9)
   {
@@ -115,7 +115,7 @@ String LeMoisSuivantLeNumero(int Mois)
   }
   else if (Mois == 12)
   {
-    resMois = "Decembre";
+    resMois = "Décembre";
   }
   else{
     resMois = "Error";

@@ -28,14 +28,16 @@ dependencies:
   intl: ^0.16.1
   flutter_launcher_icons: ^0.7.3
 
+flutter_icons:
+  image_path: "assets/logo/logoCNPAMN.png"
+  android: true,
+  ios: true,
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter_icons:
-  android: true,
-  ios: true,
-  image_path: "assets/logo/logoCNPAMN.png"
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    new Timer.periodic(Duration(minutes: 12), (Timer t) => setState((){}));
+    new Timer.periodic(Duration(minutes: 1), (Timer t) => setState((){}));
   }
 
   @override

@@ -28,11 +28,14 @@ class DataListPortrait extends StatelessWidget {
     vM0nds = (vM0nds * (pow(10, 1))).round() / (pow(10, 1));
     var vC0nds = (datas[nbDatas - 1].vC0 / 1.852);
     vC0nds = (vC0nds * (pow(10, 1))).round() / (pow(10, 1));
+    var timeSt = datas[nbDatas - 1].time;
+    var diff = new DateTime.fromMillisecondsSinceEpoch(int.parse(timeSt) * 1000, isUtc: false);
+    var h = diff.hour + 2;
     DateTime today = new DateTime.now();
     String jour = LeJourSuivantLeNumero(today.weekday);
     String mois = LeMoisSuivantLeNumero(today.month);
     String format ="${jour} ${today.day.toString().padLeft(2,'0')} ${mois} ${today.year.toString()}";
-    String heure = "${today.hour.toString().padLeft(2,'0')}h${today.minute.toString().padLeft(2,'0')}";
+    String heure = "${h.toString().padLeft(2,'0')}h${diff.minute.toString().padLeft(2,'0')}";
     var da0 = datas[nbDatas - 1 ].dA0;
     var temp = datas[nbDatas - 1].temp;
     var trueTemp;
@@ -43,10 +46,13 @@ class DataListPortrait extends StatelessWidget {
       trueTemp = ConvertTemperature(temp);
     }
     double nb = calculDegOr(da0);
+    double nb2 = calculDegOr(datas[nbDatas - 1 ].dA2);
     String orientation = OriantaionVentStr(nb);
     String orientationIni = OriantaionVentStrInitial(nb);
     double x = OriantaionVentPointX(nb);
     double y = OriantaionVentPointY(nb);
+    double x2 = OriantaionVentPointX(nb2);
+    double y2 = OriantaionVentPointY(nb2);
     return Container(
       child: Column(
           children: <Widget>[
@@ -84,7 +90,7 @@ class DataListPortrait extends StatelessWidget {
                 ),
               ),
               child: CustomPaint(
-                painter: OpenPainter(w: width, h: height/2, x: x, y: y, orTel: orTel)
+                painter: OpenPainter(w: width, h: height/2, x: x, y: y, x2: x2, y2: y2, orTel: orTel)
               ),
             ),
             Container(
