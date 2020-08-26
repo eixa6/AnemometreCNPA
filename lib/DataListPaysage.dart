@@ -36,7 +36,7 @@ class DataListPaysage extends StatelessWidget {
 
     var timeSt = datas[nbDatas - 1].time;
     var diff = new DateTime.fromMillisecondsSinceEpoch(int.parse(timeSt) * 1000, isUtc: false);
-    var h = diff.hour + 2;
+    var h = diff.hour;
 
     DateTime today = new DateTime.now();
     String jour = LeJourSuivantLeNumero(today.weekday);

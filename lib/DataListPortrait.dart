@@ -30,7 +30,7 @@ class DataListPortrait extends StatelessWidget {
     vC0nds = (vC0nds * (pow(10, 1))).round() / (pow(10, 1));
     var timeSt = datas[nbDatas - 1].time;
     var diff = new DateTime.fromMillisecondsSinceEpoch(int.parse(timeSt) * 1000, isUtc: false);
-    var h = diff.hour + 2;
+    var h = diff.hour;
     DateTime today = new DateTime.now();
     String jour = LeJourSuivantLeNumero(today.weekday);
     String mois = LeMoisSuivantLeNumero(today.month);
